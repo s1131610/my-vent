@@ -1,0 +1,38 @@
+<p>
+search-providers works!
+</p>
+<!-- Search form -->
+<form class="search">
+  <div>
+    <input type="text" placeholder="Search for a provider">
+  </div>
+</form>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 33%">Company</th>
+            <th style="width: 33%">Service Type</th>
+            <th style="width: 33%">State</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.businessName}} {{user.serviceType}} </td>
+            <td>{{user.email}}</td>
+            <td>{{user.role}}</td>
+            <td style="white-space: nowrap">
+                <a routerLink="edit/{{user.id}}" class="btn btn-sm btn-primary mr-1">Edit</a>
+                <button (click)="deleteUser(user.id)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="user.isDeleting">
+                    <span *ngIf="user.isDeleting" class="spinner-border spinner-border-sm"></span>
+                    <span *ngIf="!user.isDeleting">Delete</span>
+                </button>
+            </td>
+        </tr>
+        <tr *ngIf="!users">
+            <td colspan="4" class="text-center">
+                <h1>no providers to display</h1>
+            </td>
+        </tr>
+    </tbody>
+</table>

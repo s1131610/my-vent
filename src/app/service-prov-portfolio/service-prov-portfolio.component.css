@@ -1,0 +1,17 @@
+h1, h4, tr{
+color: #008c9b;
+}
+
+table, thead, tbody, tr {
+  color: #008c9b;
+    border: 3px solid #008c9b;
+  margin-top: 15px;
+  margin-bottom: 30px;
+ 
+}
+
+a.btn{
+color: white;
+background-color:#008c9b;
+margin: 10px;
+}

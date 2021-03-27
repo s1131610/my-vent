@@ -1,0 +1,28 @@
+<h1 *ngIf="isAddMode">Add Event</h1>
+<h1 *ngIf="!isAddMode">Edit Event</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="form-group" style="width: 100%">
+            <label>Event Name</label>
+            <input type="text" width= "100%" formControlName="eventName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.eventName.errors }" />
+            <div *ngIf="submitted && f.eventName.errors" class="invalid-feedback">
+                <div *ngIf="f.eventName.errors.required">Event Name is required</div>
+            </div>
+           </div>
+        <div class="form-group" style="width: 100%">
+            <label>Event Date</label>
+            <input type="text" formControlName="eventDate" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.eventDate.errors }" />
+            <div *ngIf="submitted && f.eventDate.errors" class="invalid-feedback">
+                <div *ngIf="f.eventDate.errors.required">Event Date is required</div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Save
+        </button>
+        <a routerLink="/event-list" class="btn btn-link">Cancel</a>
+    </div>
+</form>

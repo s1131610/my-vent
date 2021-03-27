@@ -1,0 +1,11 @@
+.navbar-custom{
+  background-color: #008c9b;
+  color: white;
+}
+.navbar-custom a{
+  color: white;
+}
+
+.app-container{
+  padding: 5%;
+}

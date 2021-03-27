@@ -1,0 +1,39 @@
+button {
+  background-color: #008c9b;
+  border: none;
+}
+
+a.mr-1{
+  background-color: lightgray;
+  color: #008c9b;
+  border-color:#008c9b ;
+}
+
+a.mr-1:hover{
+  background-color: white;
+  color: #008c9b;
+  border-color:#008c9b ;
+}
+
+a.mb-2:hover {
+  background-color: lightgray;
+  font-size: 1.2em;
+  color: #008c9b;
+}
+
+a.mb-2 {
+  background-color: #008c9b;
+  color: white;
+  font-size: 1.2em;
+  border-color: #008c9b;
+  border-width: 3px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+a.eventLinks {
+  color: #008c9b;
+}
+h1 {
+  color: #008c9b;
+  float: left;
+}

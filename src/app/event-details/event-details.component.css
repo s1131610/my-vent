@@ -1,0 +1,44 @@
+button {
+  background-color: #008c9b;
+  border: none;
+}
+a{
+  color: #008c9b;
+  text-decoration: underline;
+}
+a:hover{
+  font-weight: bold;
+  
+}
+a.mr-1{
+  background-color: lightgray;
+  color: #008c9b;
+  border-color:#008c9b ;
+}
+
+a.btn-danger{
+  color: white;
+}
+a.mr-1:hover{
+  background-color: white;
+  color: #008c9b;
+  border-color:#008c9b ;
+}
+a.btn-danger:hover{
+  color: white;
+}
+h1 {
+  color: #008c9b;
+  font-weight: bold;
+}
+h3{
+  font-size: 1.3em;
+  font-weight: 500;
+}
+table, thead, tbody, tr {
+  color: #008c9b;
+    border: 3px solid #008c9b;
+  margin-top: 15px;
+  margin-bottom: 30px;
+ 
+}
