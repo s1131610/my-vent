@@ -41,19 +41,19 @@ This command displays a series of configuration prompts. For this tutorial, acce
 
 In your newly CLI-generated application, replace the /src folder with the /src folder from your StackBlitz download.
 
-Use the following CLI command to run your application locally:  '''ng serve'''
+Use the following CLI command to run your application locally:  ```ng serve```
 
 Extra Steps needed:
 - copy style.css from original src/ folder into your src/ folder
-- ng serve
+- ```ng serve```
 - gets errors about search provider, does not finish compile
 - ctrl-c
 - delete search provider files
-- ng serve
+- ```ng serve```
 - gets different errors, does not finish compile
 - ctrl-c
 - restore search provider files
-- ng serve
+- ```ng serve```
 - compiles successfully - localhost:4200 works!
 
 (http://localhost:4200)
@@ -61,10 +61,10 @@ Extra Steps needed:
 ## Production
 
 Generate web site production files from the angular project
-- cd my-vent
-- ng build --prod 
+- ```cd my-vent```
+- ```ng build --prod ```
 - creates dist/my-vent/*
-- ng build was initially failing, fix was to copy src.orig/environment to src/
+- ```ng build --prod``` was initially failing, fix was to copy src.orig/environment to src/
 
 ## Server (server.js)
 
@@ -73,10 +73,10 @@ Need web server to serve dist/my-vent files. We used Node.js express server exam
 (https://itnext.io/express-server-for-an-angular-application-part-1-getting-started-2cd27de691bd)
 
 - NOTE: to fix error, removed "server" from app.server.get() in server.js file from above example 
-- to run server from my-vent directory: sudo node server.js 
+- to run server from my-vent directory: ```sudo node server.js``` 
 - to fix initial problems running above command we ran:
-- npm install express
-- npm install compression
+- ```npm install express```
+- ```npm install compression```
 - port number is defined in server.js
 
 
