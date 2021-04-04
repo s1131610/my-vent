@@ -1,27 +1,83 @@
-# MyVent
+#myVent Angular 11
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/myvent-fake-backend-login)
 
-## Development server
+## Install Angular CLI and VS Code
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[Using Angular in Visual Studio Code) [https://code.visualstudio.com/docs/nodejs/angular-tutorial]
+[nodejs download](https://nodejs.org/en/)
+[vscode download](https://code.visualstudio.com/Download)
 
-## Code scaffolding
+- Create angular folder
+- Download NodeJs and extract unto angular folder
+- Download Visual Studio Code and extract into angular folder
+- Create env.sh to set PATH
+- Open Git Bash terminal
+- cd angluar
+- source env.sh
+- npm install -g @angular/cli
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup Environment
 
-## Build
+Perform the following steps to start the Angular CLI environment. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+NOTE: The env.sh file sets PATH to include VS Code and NodeJs 
 
-## Running unit tests
+- Open Git Bash terminal
+- cd angluar
+- source env.sh
+- cd my-vent/src
+- code .
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Import StackBlitz Project into Angluar CLI
 
-## Running end-to-end tests
+[Deploying Angluar: Running your application locally](https://angular.io/start/start-deployment)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Download the source code from your StackBlitz project by clicking the Download Project icon in the left menu, across from Project, to download your files.
 
-## Further help
+Create a new Angular CLI workspace using the '''ng new''' command, where my-project-name is what you would like to call your project 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This command displays a series of configuration prompts. For this tutorial, accept the default settings for each prompt.
+
+In your newly CLI-generated application, replace the /src folder with the /src folder from your StackBlitz download.
+
+Use the following CLI command to run your application locally:  '''ng serve'''
+
+Extra Steps needed:
+- copy style.css from original src/ folder into your src/ folder
+- ng serve
+- gets errors about search provider, does not finish compile
+- ctrl-c
+- delete search provider files
+- ng serve
+- gets different errors, does not finish compile
+- ctrl-c
+- restore search provider files
+- ng serve
+- compiles successfully - localhost:4200 works!
+
+(http://localhost:4200)
+
+## Production
+
+Generate web site production files from the angular project
+- cd my-vent
+- ng build --prod 
+- creates dist/my-vent/*
+- ng build was initially failing, fix was to copy src.orig/environment to src/
+
+## Server (server.js)
+
+Need web server to serve dist/my-vent files. We used Node.js express server example from link below
+(https://itnext.io/express-server-for-an-angular-application-part-1-getting-started-2cd27de691bd)
+- NOTE: to fix error, removed "server" from app.server.get() in server.js file from above example 
+- to run server from my-vent directory: sudo node server.js 
+- to fix initial problems running above command we ran:
+- npm install express
+- npm install compression
+- port number is defined in server.js
+
+
+
+
+
