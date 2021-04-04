@@ -4,8 +4,10 @@
 
 ## Install Angular CLI and VS Code
 
-[Using Angular in Visual Studio Code] (https://code.visualstudio.com/docs/nodejs/angular-tutorial)
+[Using Angular in Visual Studio Code](https://code.visualstudio.com/docs/nodejs/angular-tutorial)
+
 [nodejs download](https://nodejs.org/en/)
+
 [vscode download](https://code.visualstudio.com/Download)
 
 - Create angular folder
@@ -13,9 +15,9 @@
 - Download Visual Studio Code and extract into angular folder
 - Create env.sh to set PATH
 - Open Git Bash terminal
-- cd angluar
-- source env.sh
-- npm install -g @angular/cli
+- `cd angluar`
+- `source env.sh`
+- `npm install -g @angular/cli`
 
 ## Setup Environment
 
@@ -24,10 +26,10 @@ Perform the following steps to start the Angular CLI environment.
 NOTE: The env.sh file sets PATH to include VS Code and NodeJs 
 
 - Open Git Bash terminal
-- cd angluar
-- source env.sh
-- cd my-vent/src
-- code .
+- ```cd angular```
+- ```source env.sh```
+- ```cd my-vent/src```
+- ```code .```
 
 ## Import StackBlitz Project into Angluar CLI
 
