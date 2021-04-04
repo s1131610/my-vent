@@ -4,7 +4,7 @@
 
 ## Install Angular CLI and VS Code
 
-[Using Angular in Visual Studio Code) [https://code.visualstudio.com/docs/nodejs/angular-tutorial]
+[Using Angular in Visual Studio Code] (https://code.visualstudio.com/docs/nodejs/angular-tutorial)
 [nodejs download](https://nodejs.org/en/)
 [vscode download](https://code.visualstudio.com/Download)
 
@@ -35,7 +35,7 @@ NOTE: The env.sh file sets PATH to include VS Code and NodeJs
 
 Download the source code from your StackBlitz project by clicking the Download Project icon in the left menu, across from Project, to download your files.
 
-Create a new Angular CLI workspace using the '''ng new''' command, where my-project-name is what you would like to call your project 
+Create a new Angular CLI workspace using the ```ng new``` command, where my-project-name is what you would like to call your project 
 
 This command displays a series of configuration prompts. For this tutorial, accept the default settings for each prompt.
 
@@ -69,7 +69,9 @@ Generate web site production files from the angular project
 ## Server (server.js)
 
 Need web server to serve dist/my-vent files. We used Node.js express server example from link below
+
 (https://itnext.io/express-server-for-an-angular-application-part-1-getting-started-2cd27de691bd)
+
 - NOTE: to fix error, removed "server" from app.server.get() in server.js file from above example 
 - to run server from my-vent directory: sudo node server.js 
 - to fix initial problems running above command we ran:
