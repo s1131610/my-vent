@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:3309'
+  apiUrl: 'http://myvent.csse-projects.monmouth.edu:3309'
 
 };
