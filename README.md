@@ -81,7 +81,35 @@ Need web server to serve dist/my-vent files. We used Node.js express server exam
 - ```npm install compression```
 - port number is defined in server.js
 
+## Application Environment
 
+- apiUrl is defined in environment-prod.ts for production builds and environment.ts for non-production builds.
 
+## CORS issue resolution
+
+- to avoid the following error, use CORS in db-my-vent server.js
+- Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at http://localhost:3309/users. (Reason: CORS request did not succeed).
+
+## AWS server startup
+
+### Create database (do this only once)
+
+- `cd db-my-vent`
+- modified myvent.sql to create "myvent" database
+- `mysql -uroot -p<password> < myvent.sql`
+
+### Start Backend
+
+- `cd db-my-vent`
+- `node server.js`
+
+### Start Frontend
+
+- `cd my-vent`
+- `sudo node server.js`
+
+**NOTES**: 
+1) older nodejs is used when running sudo (v6 vs v15) 
+2) need sudo when using port 80
 
 
