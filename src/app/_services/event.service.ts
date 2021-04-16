@@ -11,7 +11,7 @@ export class EventService {
   constructor(private http: HttpClient) {}
 
   getAll() {
-    return this.http.get<Event[]>(`/events`);
+    return this.http.get<Event[]>(`${baseUrl}/events`);
   }
   createEvent(event: Event) {
     console.log("KAK event-service.createEvent - creating event:", event);
