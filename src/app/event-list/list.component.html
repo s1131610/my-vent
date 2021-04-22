@@ -14,7 +14,7 @@
       <td style="white-space: nowrap">
         <a routerLink="edit/{{event.id}}" class="btn btn-sm btn-primary mr-1">Edit</a>
         <button (click)="deleteEvent(event.id)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="event.isDeleting">
-                    <span *ngIf="event.isDeleting" class="spinner-border spinner-border-sm"></span>
+                   <span *ngIf="event.isDeleting" class="spinner-border spinner-border-sm"></span>
                     <span *ngIf="!event.isDeleting">Delete</span>
                 </button>
       </td>

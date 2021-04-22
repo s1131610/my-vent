@@ -15,12 +15,19 @@ export class ListComponent implements OnInit {
             .subscribe(events => this.events = events);
     }
 
-    deleteEvent(id: string) {
+    deleteEvent(id: number) {
+        console.log("KAK - deleteEvent() - deleting event with id", id);
         const event = this.events.find(x => x.id === id);
         event.isDeleting = true;
         this.eventService.deleteEvent(event.id)
             .pipe(first())
             .subscribe(() => this.events = this.events.filter(x => x.id !== id));
+            
+        
+        //const event = this.eventService.getById(id);
+        //console.log("deleting event with id", id);
+        //this.eventService.deleteEvent(id);
     }
+    
    
 }
